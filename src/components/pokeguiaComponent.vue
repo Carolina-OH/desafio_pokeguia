@@ -14,14 +14,14 @@
     <label>Nombre</label>
     <input id="personaje" type="text" class="form-control text-center" v-model="personaje.nombre"><br>
     <button type="button" class="btn btn-danger" @click.prevent="fetchPersonaje">Buscar</button>
-    <img class="mt-5" :src="" alt="">
+    <img class="mt-5" :src="image.front_default" alt="">
     <p>Movimientos</p>
     <ul>
-      <li></li>
+      <li v-for="(movimiento,index) in movimientos" :key="index">{{movimiento.move.name}}</li>
     </ul>
     <p>Habilidades</p>
     <ul>
-      <li></li>
+       <li v-for="(habilidad,index) in habilidades" :key="index">{{habilidad.ability.name}}</li>
     </ul>
   </div>
   </div>
@@ -37,40 +37,49 @@ export default {
             tittle: "Pokeguía",
             personaje:{
             nombre:"",
-            movimientos:"",
-            habilidades:"",
-            imagen:"",
+            movimiento:"",
+            movimientos:[],
+            habilidades:[],
+            habilidad:"",
+            sprites:[],
             },
         }
     },
-    // computed: {
-    //   image(){
-    //     return
-    //     //this.personaje.sprites.front_default
-    //   }
-    },
+     computed: {
+       image(){
+         return this.personaje.sprites;
+       },
+      habilidades(){
+       return this.personaje.abilities;
+      },
+      movimientos(){
+        return this.personaje.moves;
+      }
+     },
     methods: {
         fetchPersonaje(){
-
-          fetch(`https://pokeapi.co/api/v2/pokemon/${this.personaje.nombre}/`)
+          fetch(`https://pokeapi.co/api/v2/pokemon/${this.personaje.nombre}`)
           .then (response=> response.json())
           .then(json=>{
             console.log(json)
-            //this.addPersonaje(json);
+            this.personaje=json;
           })
           .catch(error=>{
+            alert("personaje no encontrado")
             console.log(error)
           })
         }
-    },
-   // addPersonaje(json){
-     // if (json.results === undefined){
-     // alert("personaje no encontrado")
-      //return;      
-      //}
-      //this.personaje=json.results;
+    ,
+    addPersonaje(json){
+      console.log(json)
+      // if (JSON.parse){
+      // alert("personaje no encontrado")
+       return;      
+      // }
+      this.personaje=json.results;
     }
-    // components: {},
+   } 
+   // components: {},
 }
 </script>
 
@@ -81,6 +90,7 @@ export default {
   }
   button{
     width:200px;
+    margin:20px 20% 20px 20%;
   }
 
 
@@ -89,5 +99,9 @@ export default {
     display:flex;
     justify-content:center;
     margin:0 20% 0 20%;
+    }
+
+    ul{
+      color:black;
     }
 </style>
