@@ -8,7 +8,7 @@
     <img src="src/img/pokeball.svg" width="80" height="80" alt="" loading="lazy">
   </a>
 </nav>
-<div class="d-flex justify-content-center">
+<div class="cuerpo d-flex justify-content-center">
   <div class="card text-center mt-5">
     <h1 class="titulo-poke mt-4">{{tittle}}</h1>
     <label>Nombre</label>
@@ -102,6 +102,8 @@ export default {
     display:flex;
     justify-content:center;
     margin:0 20% 20px 20%;
+    border:1px solid black;
+    background-color:lightblue;
     }
     
     ul li{

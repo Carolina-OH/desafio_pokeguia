@@ -17,3 +17,11 @@ import pokeguiaComponent from "./components/pokeguiaComponent.vue"
     }
   }
 </script>
+<style>
+body{
+background-image:url("/src/img/mosaico.png");
+background-size:cover;
+background-repeat:repeat;
+width:100%;
+}
+</style>
