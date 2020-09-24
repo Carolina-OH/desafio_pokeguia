@@ -41,7 +41,9 @@ export default {
             movimientos:[],
             habilidades:[],
             habilidad:"",
-            sprites:[],
+            sprites:{
+              front_default:"",
+            },
             },
         }
     },
@@ -70,6 +72,9 @@ export default {
           })
         }
    },
+   created:function(){
+     this.fetchPersonaje;
+   },
    mounted:function(){
      this.personaje.nombre="pikachu"
      this.fetchPersonaje();
@@ -96,7 +101,7 @@ export default {
     width:350px;
     display:flex;
     justify-content:center;
-    margin:0 20% 0 20%;
+    margin:0 20% 20px 20%;
     }
     
     ul li{
