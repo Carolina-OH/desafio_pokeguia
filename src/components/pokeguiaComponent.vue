@@ -2,7 +2,7 @@
 <div>
     <nav class="navbar navbar-light bg-danger">
   <a class="navbar-brand" href="#">
-    <img src="src/img/pokemon-23.svg" width="200" height="100" alt="" loading="lazy">
+    <img src="src/img/pokemon-23.svg" width="300" height="100" alt="" loading="lazy">
   </a>
    <a class="navbar-brand" href="#">
     <img src="src/img/pokeball.svg" width="80" height="80" alt="" loading="lazy">
@@ -10,16 +10,16 @@
 </nav>
 <div class="d-flex justify-content-center">
   <div class="card text-center mt-5">
-    <h1>{{tittle}}</h1>
+    <h1 class="titulo-poke mt-4">{{tittle}}</h1>
     <label>Nombre</label>
     <input id="personaje" type="text" class="form-control text-center" v-model="personaje.nombre"><br>
     <button type="button" class="btn btn-danger" @click.prevent="fetchPersonaje">Buscar</button>
-    <img class="mt-5" :src="image.front_default" alt="">
-    <p>Movimientos</p>
+    <img class="mt-2" id="poke" :src="image.front_default" alt="">
+    <h3 class="font-weight-bold">Movimientos</h3>
     <ul>
       <li v-for="(movimiento,index) in movimientos" :key="index">{{movimiento.move.name}}</li>
     </ul>
-    <p>Habilidades</p>
+    <h3 class="font-weight-bold">Habilidades</h3>
     <ul>
        <li v-for="(habilidad,index) in habilidades" :key="index">{{habilidad.ability.name}}</li>
     </ul>
@@ -34,7 +34,7 @@ export default {
     // props: {},
     data: function(){
         return {
-            tittle: "Pokeguía",
+            tittle: "PokeGuía",
             personaje:{
             nombre:"",
             movimiento:"",
@@ -69,15 +69,10 @@ export default {
             console.log(error)
           })
         }
-    ,
-    addPersonaje(json){
-      console.log(json)
-      // if (JSON.parse){
-      // alert("personaje no encontrado")
-       return;      
-      // }
-      this.personaje=json.results;
-    }
+   },
+   mounted:function(){
+     this.personaje.nombre="pikachu"
+     this.fetchPersonaje();
    } 
    // components: {},
 }
@@ -92,7 +87,10 @@ export default {
     width:200px;
     margin:20px 20% 20px 20%;
   }
-
+  #poke{
+    width:100px;
+    align-self:center;
+  }
 
   .card{
     width:350px;
@@ -100,8 +98,17 @@ export default {
     justify-content:center;
     margin:0 20% 0 20%;
     }
-
-    ul{
-      color:black;
+    
+    ul li{
+      list-style:none;
+      margin-right:30px;
     }
+    .titulo-poke,h3{
+      font-family: 'Balsamiq Sans', cursive;
+      color:rgb(255,203,5);
+      text-shadow:-4px 0 rgb(23,67,124), -2px 1px rgb(23,67,124), 1px 0 rgb(23,67,124), 0 -1px rgb(23,67,124);
+      border-color:rgb(23,67,124);
+    }
+
+
 </style>
