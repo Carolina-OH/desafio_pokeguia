@@ -19,7 +19,7 @@ import pokeguiaComponent from "./components/pokeguiaComponent.vue"
 </script>
 <style>
 body{
-background-image:url("/src/img/Mosaico.png");
+background-image:url("./src/img/Mosaico.png");
 background-size:cover;
 background-repeat:repeat;
 width:100%;
