@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "serve": "webpack-dev-server --mode development",
     "test": "echo \"Error: no test specified\" && exit 1",
     "webpack-dev": "webpack-dev-server --open --hot --config=webpack.config.js --env.development=true",
     "webpack-prod": "webpack --config=webpack.config.js --env.production=true"
@@ -29,7 +28,6 @@
   },
   "dependencies": {
     "bootstrap-vue": "^2.17.3",
-    "build": "^0.1.4",
-    "cli": "^1.0.1"
+    "build": "^0.1.4"
   }
 }
