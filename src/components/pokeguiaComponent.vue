@@ -2,10 +2,10 @@
 <div>
     <nav class="navbar navbar-light bg-danger">
   <a class="navbar-brand" href="#">
-    <img src="https://raw.githubusercontent.com/Carolina-OH/pokeguia.github.io/c16376fabc9dcedfdffbdf35e8db9fa420ca4b36/Pokemon-23.svg" width="300" height="100" alt="" loading="lazy">
+    <img src="https://raw.githubusercontent.com/Carolina-OH/imagenes/d6baaaa022e53954c6a5d0cbf062000a395c7d3f/Pokemon-23.svg" width="300" height="100" alt="" loading="lazy">
   </a>
    <a class="navbar-brand" href="#">
-    <img src="https://raw.githubusercontent.com/Carolina-OH/pokeguia.github.io/c16376fabc9dcedfdffbdf35e8db9fa420ca4b36/Pokeball.svg" width="80" height="80" alt="" loading="lazy">
+    <img src="https://raw.githubusercontent.com/Carolina-OH/imagenes/d6baaaa022e53954c6a5d0cbf062000a395c7d3f/Pokeball.svg" width="80" height="80" alt="" loading="lazy">
   </a>
 </nav>
 <div class="cuerpo d-flex justify-content-center">
