@@ -2,10 +2,10 @@
 <div>
     <nav class="navbar navbar-light bg-danger">
   <a class="navbar-brand" href="#">
-    <img src="src/img/pokemon-23.svg" width="300" height="100" alt="" loading="lazy">
+    <img src="src/img/pokemon-23.svg/" width="300" height="100" alt="" loading="lazy">
   </a>
    <a class="navbar-brand" href="#">
-    <img src="src/img/pokeball.svg" width="80" height="80" alt="" loading="lazy">
+    <img src="src/img/pokeball.svg/" width="80" height="80" alt="" loading="lazy">
   </a>
 </nav>
 <div class="cuerpo d-flex justify-content-center">
